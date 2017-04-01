@@ -1,0 +1,11 @@
+<h2>Show a Todo</h2>
+
+<section ng-init="todo.getTodo()">
+  <h3>{{todo.selectedTodo.todo.title}}</h3>
+  <p>Description: {{todo.selectedTodo.todo.desc}}</p>
+  <p>Description: {{todo.selectedTodo.todo.isComplete}}</p>
+
+  <button type="button"
+  ng-click="todo.editTodo(todo.selectedTodo.todo._id)"
+  class="editBtn">Edit Todo</button>
+</section>

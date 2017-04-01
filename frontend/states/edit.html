@@ -1,0 +1,71 @@
+<h2>Edit Todo</h2>
+
+<section ng-init="todo.getTodo()">
+
+  <form ng-submit="todo.updateTodo()">
+
+    <div>
+      <label for="new-todo-title">ToDo:</label>
+      <input
+        type="text"
+        id="new-todo-title"
+        placeholder="{{todo.selectedTodo.todo.title}}"
+        ng-model="todo.selectedTodo.todo.title">
+    </div>
+
+    <div>
+      <label for="new-todo-description">Description:</label>
+      <input
+        type="text"
+        id="new-todo-description"
+        placeholder="London..."
+        ng-model="todo.selectedTodo.todo.desc">
+    </div>
+
+    <div>
+      <label for="new-todo-isComplete">Complete:</label>
+      <label for="new-todo-true">Yes</label>
+      <input
+        type="radio" value="true"
+        id="new-todo-true"
+        placeholder="London..."
+        ng-model="todo.selectedTodo.todo.isComplete">
+        <label for="new-todo-false">No</label>
+
+        <input
+          type="radio" value="false"
+          id="new-todo-false"
+          placeholder="London..."
+          ng-model="todo.selectedTodo.todo.isComplete">
+    </div>
+
+    <!-- <div>
+      <label for="new-todo-desc">Description:</label>
+      <input
+        type="text"
+        id="new-todo-desc"
+        placeholder="Very Smelly..."
+        ng-model="todo.selectedTodo.todo.desc">
+    </div>
+
+    <div>
+      <label for="new-todo-color">Color</label>
+      <select id="new-todo-color" ng-model="todo.selectedTodo.todo.color">
+
+        <option
+          ng-repeat="option in todo.colors"
+          ng-selected="option"
+          value="{{ option }}">{{ option }}
+        </option>
+
+      </select>
+    </div> -->
+
+
+    <div>
+      <input type="submit" value="Update">
+    </div>
+
+  </form>
+
+</section>
