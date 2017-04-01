@@ -63,5 +63,5 @@ Thumbs.db
 
 # Ignore the Node Modules folder
 /node_modules
-#/bower_components
-/phantomas 
+/bower_components
+/phantomas 
