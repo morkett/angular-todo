@@ -16,16 +16,15 @@
   <title>Sparta Todos</title>
 </head>
 <body>
-  <h1>Todos Of Sparta</h1>
-  <nav>
-    <ul>
-      <li><a ui-sref="home">Home</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <div class="innerContainer">
+    <h1>To-Do Of Sparta</h1>
 
-  <section ng-controller="TodoController as todo" ui-view>
 
-  </section>
+    <section ng-controller="TodoController as todo" ui-view>
 
+    </section>
+    </div>
+  </div>
 </body>
 </html>

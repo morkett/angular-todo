@@ -3,7 +3,7 @@
 <form ng-submit="todo.addTodo()">
 
   <div>
-    <label for="new-todo-name">ToDo Title:</label>
+    <label for="new-todo-name"><strong>Title:</strong></label>
     <input
       type="text"
       id="new-todo-name"
@@ -12,7 +12,7 @@
   </div>
 
   <div>
-    <label for="new-todo-desc">Description:</label>
+    <label for="new-todo-desc"><strong>Description:</strong></label>
     <input
       type="text"
       id="new-todo-desc"
@@ -20,10 +20,28 @@
       ng-model="todo.newTodo.desc">
   </div>
 
+  <div>
+    <label for="new-todo-type"><strong>Type</strong></label>
+
+    <label for="new-todo-type-true">Work</label>
+    <input
+      type="radio" value="Work"
+      id="new-todo-type-true"
+      placeholder="London..."
+      ng-model="todo.newTodo.type">
+
+      <label for="new-todo-type-false">Personal</label>
+      <input
+        type="radio" value="Personal"
+        id="new-todo-type-false"
+        placeholder="London..."
+        ng-model="todo.newTodo.type">
+  </div>
+
 
 
   <div>
     <input type="submit" value="Add Todo" >
   </div>
-
+  <a ui-sref="home" class="underline">Back</a>
 </form>

@@ -5,7 +5,7 @@
   <form ng-submit="todo.updateTodo()">
 
     <div>
-      <label for="new-todo-title">ToDo:</label>
+      <label for="new-todo-title"><strong>ToDo</strong></label>
       <input
         type="text"
         id="new-todo-title"
@@ -14,7 +14,7 @@
     </div>
 
     <div>
-      <label for="new-todo-description">Description:</label>
+      <label for="new-todo-description"><strong>Description</strong></label>
       <input
         type="text"
         id="new-todo-description"
@@ -22,8 +22,27 @@
         ng-model="todo.selectedTodo.todo.desc">
     </div>
 
+
     <div>
-      <label for="new-todo-isComplete">Complete:</label>
+      <label for="new-todo-type"><strong>Type</strong></label>
+
+      <label for="new-todo-type-true">Work</label>
+      <input
+        type="radio" value="Work"
+        id="new-todo-type-true"
+        placeholder="London..."
+        ng-model="todo.selectedTodo.todo.type">
+
+        <label for="new-todo-type-false">Personal</label>
+        <input
+          type="radio" value="Personal"
+          id="new-todo-type-false"
+          placeholder="London..."
+          ng-model="todo.selectedTodo.todo.type">
+    </div>
+
+    <div>
+      <label for="new-todo-isComplete"><strong>Complete</strong></label>
       <label for="new-todo-true">Yes</label>
       <input
         type="radio" value="true"
@@ -39,32 +58,11 @@
           ng-model="todo.selectedTodo.todo.isComplete">
     </div>
 
-    <!-- <div>
-      <label for="new-todo-desc">Description:</label>
-      <input
-        type="text"
-        id="new-todo-desc"
-        placeholder="Very Smelly..."
-        ng-model="todo.selectedTodo.todo.desc">
+    <div>
+      <input class="updateBtn" type="submit" value="Update">
+      <a ui-sref="home" class="underline">Back</a>
     </div>
 
-    <div>
-      <label for="new-todo-color">Color</label>
-      <select id="new-todo-color" ng-model="todo.selectedTodo.todo.color">
-
-        <option
-          ng-repeat="option in todo.colors"
-          ng-selected="option"
-          value="{{ option }}">{{ option }}
-        </option>
-
-      </select>
-    </div> -->
-
-
-    <div>
-      <input type="submit" value="Update">
-    </div>
 
   </form>
 

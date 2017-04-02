@@ -45,7 +45,9 @@ function updateTodo(request, response) {
 
     if (request.body.title) todo.title = request.body.title;
     if (request.body.desc) todo.desc = request.body.desc;
+    if (request.body.isComplete) todo.type = request.body.type;
     if (request.body.isComplete) todo.isComplete = request.body.isComplete;
+
 
     todo.save(function(error) {
       if (error) return response.status(404).json(error);

@@ -10,11 +10,13 @@ var records = [
   addRecord({
     title: 'Buy some milk',
     desc: '65p, bargin!',
+    type: 'Personal',
     isComplete: false
   }),
   addRecord({
-    title: 'Go to the gym',
-    desc: 'Grab your gym buddy and do to the gym',
+    title: 'Meeting',
+    desc: 'Matt from Sparta Global',
+    type:'Work',
     isComplete: false
   })
 ];
