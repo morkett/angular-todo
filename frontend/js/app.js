@@ -1,4 +1,3 @@
-
 function MainRouter ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
@@ -6,11 +5,11 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       templateUrl: '/states/home.html'
     })
     .state('new', {
-      url: '/todos/new',
+      url:'/todos/new',
       templateUrl: '/states/new.html'
     })
     .state('edit', {
-      url: '/todos/:todoId/edit',
+      url:'/todos/:todoId/edit',
       templateUrl: '/states/edit.html'
     })
     .state('show', {
@@ -23,10 +22,10 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
 
 
   $urlRouterProvider.otherwise('/todos');
-
 }
 
+
 angular
-  .module('ToDoApp', ['ui.router'])
-  .constant('API_URL', 'http://localhost:3000')
-  .config(MainRouter);
+.module('ToDoApp', ['ui.router'])
+.constant('API_URL', 'http://localhost:3000')
+.config(MainRouter);

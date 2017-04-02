@@ -1,18 +1,15 @@
 <h2>All Todos</h2>
 
 <ul >
-  <li class="todo" ng-repeat="d in todo.allTodos">
+  <li class="todo" ng-repeat="todoOne in todo.allTodos">
     <div>
-      <a ui-sref="show({todoId : d._id})"
-         ng-class="{true: 'strike', false: ''}[d.isComplete === true]">
+      <a ui-sref="show({todoId : todoOne._id})" ng-class="{true: 'strike', false: ''}[todoOne.isComplete === true]">
 
-        {{ d.title }}</a>
+        {{ todoOne.title }}</a>
 
-      <button type="button"
-      ng-click="todo.editTodo(d._id)"
-      class="editBtn">Edit Todo</button>
+      <button ng-click="todo.editTodo(todoOne._id)" type="button" class="editBtn">Edit Todo</button>
       <button type="button">Complete</button>
-      <button type="button" ng-click="todo.deleteTodo(d._id)" class="deleteBtn">X</button>
+      <button ng-click="todo.deleteTodo(todoOne._id)" type="button" class="deleteBtn">X</button>
 
     </div>
   </li>

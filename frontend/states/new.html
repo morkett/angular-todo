@@ -3,21 +3,12 @@
 <form ng-submit="todo.addTodo()">
 
   <div>
-    <label for="new-todo-name">Name:</label>
+    <label for="new-todo-name">ToDo Title:</label>
     <input
       type="text"
       id="new-todo-name"
-      placeholder="Jack the ripper..."
-      ng-model="todo.newTodo.name">
-  </div>
-
-  <div>
-    <label for="new-todo-location">Location:</label>
-    <input
-      type="text"
-      id="new-todo-location"
-      placeholder="London..."
-      ng-model="todo.newTodo.location">
+      placeholder="Enter New Todo Title"
+      ng-model="todo.newTodo.title">
   </div>
 
   <div>
@@ -25,22 +16,10 @@
     <input
       type="text"
       id="new-todo-desc"
-      placeholder="Very Smelly..."
+      placeholder="Enter A Description For Your Todo"
       ng-model="todo.newTodo.desc">
   </div>
 
-  <div>
-    <label for="new-todo-color">Color</label>
-
-    <select id="new-todo-color" ng-model="todo.newTodo.color">
-
-      <option
-        ng-repeat="option in todo.colors"
-        value="{{ option }}">{{ option }}
-      </option>
-
-    </select>
-  </div>
 
 
   <div>

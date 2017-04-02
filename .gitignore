@@ -57,11 +57,11 @@ Thumbs.db
 /.sass-cache
 
 # Ignore CSS & Map File
-/css
-*.css
-*.map
+#/css
+#*.css
+#*.map
 
 # Ignore the Node Modules folder
 /node_modules
 /bower_components
-/phantomas 
+/phantomas
