@@ -52,7 +52,7 @@ function TodoController($state, $stateParams, TodoFactory){
         console.warn('Error Updating: ',error);
       }
     );
-  }
+  };
 
   controller.addTodo = function(){
     TodoFactory.createOne(controller.newTodo).then(
@@ -64,19 +64,19 @@ function TodoController($state, $stateParams, TodoFactory){
         console.warn('Error creating new Todo: ', error);
       }
     );
-  }
+  };
 
   controller.deleteTodo = function(todoId){
     TodoFactory.deleteOne(todoId).then(
       function success(response){
         controller.changeState();
-        console.log('Deleted Todo: ',success);
+        console.log('Deleted Todo: ',response);
       },
       function error (error) {
         console.warn('Could not delete todo: ',error);
       }
     );
-  }
+  };
 
 
 

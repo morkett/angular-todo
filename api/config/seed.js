@@ -16,7 +16,7 @@ var records = [
   addRecord({
     title: 'Meeting',
     desc: 'Matt from Sparta Global',
-    type:'Work',
+    type: 'Work',
     isComplete: false
   })
 ];

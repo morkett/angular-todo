@@ -10,7 +10,9 @@
         ng-class="{true: 'green', false: 'blue'}[todoOne.type === 'Work']">
          - {{ todoOne.type }}</p>
 
-      <button ng-click="todo.deleteTodo(todoOne._id)" type="button" class="deleteBtn">X</button>
+      <button type="button" class="deleteBtn"
+        ng-click="todo.deleteTodo(todoOne._id)">X
+      </button>
 
     </div>
   </li>

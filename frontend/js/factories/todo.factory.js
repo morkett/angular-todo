@@ -32,8 +32,8 @@ function TodoFactory(API_URL, $http) {
 
     deleteOne: function(todoId) {
       return $http({
-      method: 'DELETE',
-      url: `${API_URL}/todos/${todoId}`
+        method: 'DELETE',
+        url: `${API_URL}/todos/${todoId}`
       });
     }
 
