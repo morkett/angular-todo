@@ -4,7 +4,7 @@
 }
 
 * {
-    text-align: center;
+    text-align: left;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background: lightgray;
+    background: #e3e3e3;
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
     border-radius: 15px;
     position: relative;
     width: 500px;
-    height: 600px;
+    min-height: 600px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -203,17 +203,12 @@ strong {
 }
 
 section {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+}
+
+.noTextAlign {
+  text-align: left !important;
 }

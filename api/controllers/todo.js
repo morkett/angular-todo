@@ -43,10 +43,10 @@ function updateTodo(request, response) {
   Todo.findById({ _id: id }, function(error, todo) {
     if(error) return response.json(todo);
 
-    if (request.body.title) todo.title = request.body.title;
-    if (request.body.desc) todo.desc = request.body.desc;
-    if (request.body.isComplete) todo.type = request.body.type;
-    if (request.body.isComplete) todo.isComplete = request.body.isComplete;
+    if (request.body.title !== undefined) todo.title = request.body.title;
+    if (request.body.desc !== undefined) todo.desc = request.body.desc;
+    if (request.body.isComplete !== undefined) todo.type = request.body.type;
+    if (request.body.isComplete !== undefined) todo.isComplete = request.body.isComplete;
 
 
     todo.save(function(error) {

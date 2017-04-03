@@ -78,6 +78,19 @@ function TodoController($state, $stateParams, TodoFactory){
     );
   };
 
+  controller.completeTodo =function(todoId) {
+    console.log(`completeTodo(${todoId})`);
+    TodoFactory.completeOne(todoId).then(
+      function success(response){
+        controller.changeState();
+        console.log('Deleted Todo: ',response);
+      },
+      function error (error) {
+        console.warn('Could not delete todo: ',error);
+      }
+    );
+  };
+
 
 
   function init() {
